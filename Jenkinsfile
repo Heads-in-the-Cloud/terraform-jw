@@ -13,5 +13,11 @@ pipeline {
                 echo "done!"
             }
         }
+        stage('Terraform destroy'){
+            steps{
+                sh "terraform destroy --auto-approve"
+                echo "done!"
+            }
+        }
     }
 }
